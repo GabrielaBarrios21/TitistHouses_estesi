@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Aplicación del Algoritmo de Kruskal</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+        <div class="page-wrap">
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="active"><span class="icon fa-home"></span></a></li>
+                    <li><a href="gallery.html"><span class="icon fa-camera-retro"></span></a></li>
+                    <li><a href="generic.html"><span class="icon fa-file-text-o"></span></a></li>            
+                </ul>
+            </nav>
+            <!-- Main -->
+            <section id="main">
+                <!-- Header -->
+                <header id="header">
+                    <div>Algoritmo de Kruskal - Aplicación en Titi's Houses</div>
+                </header>
+                
+            <!-- Para el lienzo y los botones -->
+            <!-- BOTONES-->
+            <section>
+                <section class="wrapper">
+                    <ul class="tabs">
+                        <label for="imageSelector">Seleccione la imagen del nodo:</label>
+                        <select id="imageSelector">
+                            <option value="images/persona_png.png">Persona</option>
+                            <option value="images/computer_png.png">Computadora</option>
+                        </select>
+                        <button onclick="agregarNodo()" class="custom-btn" style="background-color: rgb(129, 34, 34); color: white;">Agregar Nodo</button>
+                        <button onclick="eliminarNodo()" class="custom-btn" style="background-color: rgb(199, 85, 23); color: white;">Eliminar Nodo</button>
+                        <button onclick="cambiarNombre()" class="custom-btn" style="background-color: #c7a117; color: white;">Cambiar Nombre</button>
+                        <button onclick="cargarGrafo()" class="custom-btn" style="background-color: rgb(30, 39, 140); color: white; padding-left: 1%; padding-right: 1%;">Cargar Grafo</button>
+                        <button onclick="guardarGrafo()" class="custom-btn" style="background-color: hsl(205, 46%, 43%); color: white;">Guardar Grafo</button>
+                        <button onclick="kruskal()" class="custom-btn" style="background-color: rgb(56, 103, 214); color: white;">Kruskal menor</button>
+                        <button onclick="kruskalWithHighestWeight()" class="custom-btn" style="background-color: rgb(97, 33, 161); color: white;">Kruskal mayor</button>
+
+                        
+                        <!--
+
+                        <input type="file" id="inputArchivo" accept=".json" class="custom-btn" style="background-color: #5da13b; margin-top: 5%; margin-bottom: 5%; padding: 5%">
+
+                        <li><a href="#" data-tag="all" class="button active">All</a></li>
+                        <li><a href="#" data-tag="people" class="button">People</a></li>
+                        <li><a href="#" data-tag="place" class="button">Places</a></li>
+                        <li><a href="#" data-tag="thing" class="button">Things</a></li>
+                        -->
+                    </ul>
+                </section>
+            </section>
+            <!-- LIENZO-->
+            <section>
+                <div class="column">
+                    <div id="lienzo" style="width: 98%; height: 700px; background-color: rgb(251, 251, 248); margin: 10px; border-radius: 10px;"></div>
+                    <div id="sumaAristas" class="resultado-aristas"></div>
+
+                </div>
+                
+            </section>
+
+        </section>
+        </div>
+        
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/caso_estudio.js"></script>
+    </body>
+
+    <style>
+        .side-buttons {
+            top: 5%;
+            width: 310px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10%;
+            background-color: #b3cae0;
+            padding-top: 1%;
+            border-radius: 10px;
+        }
+        
+        .side-buttons .custom-btn {
+            width: 92%;
+            margin-bottom: 10px;
+            font-size: 80%;
+            border: 2px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .side-buttons .custom-btn:hover {
+            background-color: purple;
+        }
+
+        /* Estilo personalizado para el resultado de la suma de aristas */
+        .resultado-aristas {
+            background-color: #5a7296;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 24px;
+            width: 50%;
+            margin: 20px; 
+            margin-left: 250px; 
+            margin-right: 250px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</html>
