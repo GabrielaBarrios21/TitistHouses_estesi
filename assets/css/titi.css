@@ -1,0 +1,34 @@
+/* Estilo del botón de ayuda */
+#ayudaBtn {
+    border-radius: 50%; /* Hace que el botón sea completamente redondo */
+    font-size: 20px; /* Ajusta el tamaño de la fuente */
+    background-color: rgb(51, 212, 255); /* Color de fondo */
+    color: white; /* Color del texto */
+    width: 50px; /* Ajusta el ancho del botón */
+    height: 50px; /* Ajusta la altura del botón */
+    margin: 1%; /* Margen alrededor del botón */
+    position: fixed; /* Fija el botón en la pantalla */
+    bottom: 20px; /* Posición desde la parte inferior */
+    right: 20px; /* Posición desde la parte derecha */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+    border: none; /* Elimina cualquier borde predeterminado */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* Ajustes adicionales para el botón */
+#ayudaBtn:hover {
+    background-color: rgb(51, 110, 255); /* Cambia el color al pasar el mouse */
+}
+/* Estilo para los botones de acción */
+.btn-action {
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para el estado hover de los botones de acción */
+.btn-action:hover {
+    background-color: rgb(51, 110, 255);
+}
