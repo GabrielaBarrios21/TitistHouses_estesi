@@ -12,6 +12,10 @@
             display: flex;
             justify-content: center; /* Centra horizontalmente */
             align-items: center; /* Centra verticalmente */
+            background-color: rgb(223, 183, 107);
+            border-radius: 20px;
+            padding: 2%;
+            margin: 2%;
         }
         .imagen {
             width: 50%; /* Ajusta el tamaño según tus necesidades */
@@ -22,6 +26,7 @@
 </head>
 <body>
     <div class="page-wrap">
+        
         <!-- Main -->
         <section id="main">
             <!-- Banner -->
@@ -41,7 +46,7 @@
                     <h3 class="text">
                         En esta página se verá el funcionamiento del algoritmo de <strong><em>Kruskal</em></strong>, aplicado a la empresa <strong><em>Titi's Houses</em></strong> dedicada a la comercialización
                         de modelos de casas en miniatura. El algortimo de Kruskal puede serle útil para: <br>
-                        
+                    </h3>
                         <ul>
                             <li><strong>Optimizar sus estrategias de marketing para llegar a sus clientes objetivo de la manera más efectiva.</strong> <br>
                                 Cada cliente es representado como un nodo en un grafo y cada arista representa la 
@@ -52,56 +57,50 @@
                                 La facilidad de transferecia de audiencia de una red social a otra y así maximizar el alcance de Titi's Houses o para reducir los costos de totales de las campañas de marketing entre redes sociales
                             </li>
                         </ul>
-                    </h3>
+                    
                     <h3 class="text">
-                        Lo primero que visualizarás en esta página será que a tu derecha cuentas con una serie de botones y en el medio de tu pantalla un lienzo, que es donde ocurrirá la magia.<br>
-                        Primero cuentas con un menú desplegable donde podrás elegir la <strong>Imagen</strong> que quieres utilizar para tus nodos, pueden ser representados por tus clientes, o por una computadora que simboliza las redes sociales.<br>
+                        Lo primero que visualizarás en esta página será que a tu derecha cuentas con una serie de botones y en el medio de tu pantalla un lienzo, que es donde ocurrirá la magia.<br></h3>
+                        <p>Primero cuentas con un menú desplegable donde podrás elegir la <strong>Imagen</strong> que quieres utilizar para tus nodos, pueden ser representados por tus clientes, o por una computadora que simboliza las redes sociales.<br>
                     
                         <div class="columnas">
                             <img src="images/persona_png.png" alt="Persona" class="imagen">
                             <img src="images/computer_png.png" alt="Red social" class="imagen">
-                        </div>
-                        Cuando presiones el boton de <strong>Crear Nodo</strong> y posteriormente presiones el lienzo se creará un nodo en donde hagas <i>click</i> con el mouse 
+                        </div><br>
+                        <p>Cuando presiones el boton de <strong>Crear Nodo</strong> y posteriormente presiones el lienzo se creará un nodo en donde hagas <i>click</i> con el mouse 
                         (dentro del lienzo). Debes repetir este proceso hasta que crees los nodos con los que estés cómodo.<br>
-                    </h3>
-                    <h3 class="text">
+                    </p>
+                    <p>
                         Si quieres cambiar el nombre a un nodo, selecciona el nodo que quieres renombrar y selecciona el boton <strong>Renombrar Nodo</strong>. Si no seleccionaste ningún nodo para 
                         renombrar te aparecerá un pequeño mensaje que te recoradará hacer la selección del nodo.
-                    </h3>
-                    <h3 class="text">
+                    <br><br>
+                    
                         Para eliminar un nodo, es el mismo proceso que el de renombrar nodo, solo que tendrás que seleccionar el botón <strong>Eliminar Nodo</strong>
-                    </h3>
-                    <h3 class="text">
+                    <br><br>
                         Si quieres conectar 2 nodos, lo único que debes hacer es hacer <i>click</i> en aquellos nodos que quieras conectar, la arista se creará automáticamente.
-                        <br>
+                        <br><br>
                         Para ponerle un peso a la arista que se ha generado debes hacer doble click sobre la arista, te aparecerá un mensaje en el cuál debes ingresar
                         el peso que quieres que tenga la arista seleccionada.<br>
                         Si por el contrario creaste una arista con la que no te sientes conforme, selecciona la arista y <strong>oprime el botón de blackspace o esc en tu teclado.</strong>
-                    </h3>
-                    <h3 class="text">
-                        Si quieres descubrir el valor mínimo con el que resuelves tu problema, presiona el botón de <strong>Kruskal menor</strong>, este se encargará de resaltar las aristas que tienen
-                        el menor peso y el camino que debes seguir para pasar por todos tus nodos utilizando recursos mínimos y sin cerrar los polígonos.<br>
+                    <br><br>  Si quieres descubrir el valor mínimo con el que resuelves tu problema, presiona el botón de <strong>Kruskal menor</strong>, este se encargará de resaltar las aristas que tienen
+                        el menor peso y el camino que debes seguir para pasar por todos tus nodos utilizando recursos mínimos y sin cerrar los polígonos.<br><br>
                         El valor obtenido lo podrás visualizar en la parte inferior dentro de un rectángulo de color celeste.
-                    </h3>
-                    <h3 class="text">
+                    <br><br>
                         Si quieres descubrir el valor máximo con el que resuelves tu problema, presiona el botón de <strong>Kruskal mayor</strong>, este al contrario del anterior se encargará de resaltar las aristas que tienen
                         el mayor peso, pero funciona de igual manera que el primero solo que maximizando los resultados.<br>
                         El valor obtenido lo podrás visualizar en la parte inferior dentro de un rectángulo de color celeste.
-                    </h3>
-                    <h3 class="text">
+                    <br><br>
                         Si quieres guardar el grafo que creaste sólo debes presionar <strong>Guardar Grafo</strong>, podrás ponerle el nombre que quieras a tu archivo, éste se guardará en tu dispositivo.
-                    </h3>
-                    <h3 class="text">
+                    <br><br>
                         Finalmente, para volver a cargar un grafo que tienes guardado debes presionar en <strong>Seleccionar Archivo</strong>, seleccionas tu archivo y presionas el botón
                         <strong>Cargar Grafo</strong>, tu grafo se mostrará en el lienzo y podrás continuar con tu trabajo.
-                    </h3>
+                    </p>
                 </div>
             </div>
         </section>
     </div>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer id="footer" style="padding-left:2%;padding-right:2%;border-radius:20px;font-size:10px;text-align:center">
         <h3>
             Grafos: Análisis de Algoritmos MAT-361
             <br>
