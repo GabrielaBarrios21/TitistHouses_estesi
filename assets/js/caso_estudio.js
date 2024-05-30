@@ -319,7 +319,7 @@ function kruskal() {
   });
 
   // Actualizar el contenido del elemento HTML con la suma de los pesos de las aristas resaltadas
-  document.getElementById("sumaAristas").innerHTML = `Suma de las Aristas: ${sumaAristasResaltadas}`;
+  document.getElementById("sumaAristas").innerHTML = `El valor minimizando óptimo es: ${sumaAristasResaltadas}`;
 }
 
 // Función para ejecutar Kruskal y resaltar las aristas resultantes
@@ -404,7 +404,7 @@ function kruskalWithHighestWeight() {
   });
 
   // Actualizar el contenido del elemento HTML con la suma de los pesos de las aristas resaltadas
-  document.getElementById("sumaAristas").innerHTML = `Suma de las Aristas: ${sumaAristasResaltadas}`;
+  document.getElementById("sumaAristas").innerHTML = `El valor máximo óptimo es: ${sumaAristasResaltadas}`;
 }
 
 // Function to execute Kruskal with highest weight and highlight the resulting edges
