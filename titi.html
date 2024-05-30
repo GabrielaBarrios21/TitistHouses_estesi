@@ -49,39 +49,38 @@
             </ul>
         </nav>
         <!-- Main -->
-        
-        <!-- BOTONES-->
-        <section>
-            
-            <section class="wrapper">
-                <ul class="tabs">
-                    <label for="imageSelector">Seleccione la imagen del nodo:</label>
-                    <select id="imageSelector">
-                        <option value="images/persona_png.png">Persona</option>
-                        <option value="images/computer_png.png">Computadora</option>
-                    </select>
-                    <div>
-                        <button onclick="agregarNodo()" class="custom-btn" style="background-color: rgb(129, 34, 34); color: white; margin: 0.5%;">Agregar Nodo</button>
-                        <button onclick="eliminarNodo()" class="custom-btn" style="background-color: rgb(199, 85, 23); color: white; margin: 0.5%;">Eliminar Nodo</button>
-                        <button onclick="cambiarNombre()" class="custom-btn" style="background-color: rgb(199, 161, 23); color: white; margin: 0.5%;">Cambiar Nombre</button>
-                        <button onclick="cargarGrafo()" class="custom-btn" style="background-color: rgb(30, 39, 140); color: white; margin: 0.5%;">Cargar Grafo</button>
-                        <button onclick="guardarGrafo()" class="custom-btn" style="background-color: rgb(59, 118, 160); color: white; margin: 0.5%;">Guardar Grafo</button>
-                        <input type="file" id="inputArchivo" accept=".json" class="custom-btn" style="background-color: #5da13b; margin: 0.5%; padding: 0.5% ">
-                        <button onclick="kruskal()" class="custom-btn" style="background-color: rgb(56, 103, 214); color: white; margin: 0.5%;">Kruskal Minimizar</button>
-                        <button onclick="kruskalWithHighestWeight()" class="custom-btn" style="background-color: rgb(97, 33, 161); color: white; margin: 0.5%;">Kruskal Maximizar</button>
-                    </div>
-                </ul>
-            </section>
-            <section>
-                <div class="column">
-                    <div id="lienzo" style="width: 99%; height: 500px; background-color: rgb(240, 240, 240); margin: 10px; border-radius: 10px;"></div>
-                    <div id="sumaAristas" class="resultado-aristas"></div>
+        <section id="main">
+            <!-- Header -->
+            <header id="header">
+                <div>Algoritmo de Kruskal - Aplicación en Titi's Houses</div>
+            </header>
 
-                </div>
-                
+            <!-- BOTONES Y LIENZO-->
+            <section>
+                <section class="wrapper">
+                    <ul class="tabs">
+                        <label for="imageSelector">Seleccione la imagen del nodo:</label>
+                        <select id="imageSelector">
+                            <option value="images/persona_png.png">Persona</option>
+                            <option value="images/computer_png.png">Computadora</option>
+                        </select>
+                        <div>
+                            <button onclick="agregarNodo()" class="custom-btn" style="background-color: rgb(129, 34, 34); color: white; margin: 0.5%;">Agregar Nodo</button>
+                            <button onclick="eliminarNodo()" class="custom-btn" style="background-color: rgb(199, 85, 23); color: white; margin: 0.5%;">Eliminar Nodo</button>
+                            <button onclick="cambiarNombre()" class="custom-btn" style="background-color: rgb(199, 161, 23); color: white; margin: 0.5%;">Cambiar Nombre</button>
+                            <button onclick="cargarGrafo()" class="custom-btn" style="background-color: rgb(30, 39, 140); color: white; margin: 0.5%;">Cargar Grafo</button>
+                            <button onclick="guardarGrafo()" class="custom-btn" style="background-color: rgb(59, 118, 160); color: white; margin: 0.5%;">Guardar Grafo</button>
+                            <input type="file" id="inputArchivo" accept=".json" class="custom-btn" style="background-color: #5da13b; margin: 0.5%; padding: 0.5% ">
+                            <button onclick="kruskal()" class="custom-btn" style="background-color: rgb(56, 103, 214); color: white; margin: 0.5%;">Kruskal Minimizar</button>
+                            <button onclick="kruskalWithHighestWeight()" class="custom-btn" style="background-color: rgb(97, 33, 161); color: white; margin: 0.5%;">Kruskal Maximizar</button>
+
+                            <div id="lienzo" style="width: 99%; height: 500px; background-color: rgb(255, 255, 255); margin: 10px; border-radius: 10px;"></div>
+                            <div id="sumaAristas" class="resultado-aristas"></div>
+                        </div>
+                    </ul>
+                </section>
             </section>
         </section>
-
     </div>
         
     
