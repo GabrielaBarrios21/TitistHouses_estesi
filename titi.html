@@ -21,37 +21,9 @@
     </script>
     
     <style>
-        .side-buttons {
-            top: 5%;
-            width: 310px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10%;
-            background-color: #b3cae0;
-            padding-top: 1%;
-            border-radius: 10px;
-        }
-        
-        .side-buttons .custom-btn {
-            width: 92%;
-            margin-bottom: 10px;
-            font-size: 80%;
-            border: 2px solid black;
-            border-radius: 10px;
-            cursor: pointer;
-            color: white;
-            margin-left: 10px;
-        }
-
-        .side-buttons .custom-btn:hover {
-            background-color: purple;
-        }
-
         /* Estilo personalizado para el resultado de la suma de aristas */
         .resultado-aristas {
-            background-color: #5a7296;
+            background-color: #19B5FE;
             color: #ffffff;
             padding: 20px;
             border-radius: 10px;
@@ -67,6 +39,7 @@
 </head>
 <body>
     <div class="page-wrap">
+        
         <!-- Nav -->
         <nav id="nav">
             <ul>
@@ -76,8 +49,10 @@
             </ul>
         </nav>
         <!-- Main -->
+        
         <!-- BOTONES-->
         <section>
+            
             <section class="wrapper">
                 <ul class="tabs">
                     <label for="imageSelector">Seleccione la imagen del nodo:</label>
@@ -85,76 +60,36 @@
                         <option value="images/persona_png.png">Persona</option>
                         <option value="images/computer_png.png">Computadora</option>
                     </select>
-                    <button onclick="agregarNodo()" class="custom-btn" style="background-color: rgb(129, 34, 34); color: white;">Agregar Nodo</button>
-                    <button onclick="eliminarNodo()" class="custom-btn" style="background-color: rgb(199, 85, 23); color: white;">Eliminar Nodo</button>
-                    <button onclick="cambiarNombre()" class="custom-btn" style="background-color: #c7a117; color: white;">Cambiar Nombre</button>
-                    <button onclick="cargarGrafo()" class="custom-btn" style="background-color: rgb(30, 39, 140); color: white; padding-left: 1%; padding-right: 1%;">Cargar Grafo</button>
-                    <button onclick="guardarGrafo()" class="custom-btn" style="background-color: hsl(205, 46%, 43%); color: white;">Guardar Grafo</button>
-                    <button onclick="kruskal()" class="custom-btn" style="background-color: rgb(56, 103, 214); color: white;">Kruskal menor</button>
-                    <button onclick="kruskalWithHighestWeight()" class="custom-btn" style="background-color: rgb(97, 33, 161); color: white;">Kruskal mayor</button>
-
-                    
-                    <!--
-
-                    <input type="file" id="inputArchivo" accept=".json" class="custom-btn" style="background-color: #5da13b; margin-top: 5%; margin-bottom: 5%; padding: 5%">
-
-                    <li><a href="#" data-tag="all" class="button active">All</a></li>
-                    <li><a href="#" data-tag="people" class="button">People</a></li>
-                    <li><a href="#" data-tag="place" class="button">Places</a></li>
-                    <li><a href="#" data-tag="thing" class="button">Things</a></li>
-                    -->
+                    <div>
+                        <button onclick="agregarNodo()" class="custom-btn" style="background-color: rgb(129, 34, 34); color: white; margin: 0.5%;">Agregar Nodo</button>
+                        <button onclick="eliminarNodo()" class="custom-btn" style="background-color: rgb(199, 85, 23); color: white; margin: 0.5%;">Eliminar Nodo</button>
+                        <button onclick="cambiarNombre()" class="custom-btn" style="background-color: rgb(199, 161, 23); color: white; margin: 0.5%;">Cambiar Nombre</button>
+                        <button onclick="cargarGrafo()" class="custom-btn" style="background-color: rgb(30, 39, 140); color: white; margin: 0.5%;">Cargar Grafo</button>
+                        <button onclick="guardarGrafo()" class="custom-btn" style="background-color: rgb(59, 118, 160); color: white; margin: 0.5%;">Guardar Grafo</button>
+                        <input type="file" id="inputArchivo" accept=".json" class="custom-btn" style="background-color: #5da13b; margin: 0.5%; padding: 0.5% ">
+                        <button onclick="kruskal()" class="custom-btn" style="background-color: rgb(56, 103, 214); color: white; margin: 0.5%;">Kruskal Minimizar</button>
+                        <button onclick="kruskalWithHighestWeight()" class="custom-btn" style="background-color: rgb(97, 33, 161); color: white; margin: 0.5%;">Kruskal Maximizar</button>
+                    </div>
                 </ul>
+            </section>
+            <section>
+                <div class="column">
+                    <div id="lienzo" style="width: 99%; height: 500px; background-color: rgb(240, 240, 240); margin: 10px; border-radius: 10px;"></div>
+                    <div id="sumaAristas" class="resultado-aristas"></div>
+
+                </div>
+                
             </section>
         </section>
 
     </div>
         
     
-    <div class="row">
-        <div class="box alt">
-            <div class="row gtr-50 gtr-uniform">
-                <div class="col-9">
-                    <div id="tablaXiYi" style="background-color: aliceblue; margin: 20px; margin-left: 250px; margin-right: 250px;"></div>
-                    <div id="tablaHolguras" style="background-color: aliceblue; margin: 20px; margin-left: 250px; margin-right: 250px;"></div>
-                    <div id="lienzo" style="width: 100%; height: 700px; background-color: rgb(251, 251, 248); margin: 10px; border-radius: 10px;"></div>
-                    <div id="matriz" style="background-color: aliceblue; margin: 20px; margin-left: 250px; margin-right: 250px;"></div>
-                    <div id="listaHolguras" style="background-color: aliceblue; margin: 20px; margin-left: 250px; margin-right: 250px;"></div> 
-                    <div id="sumaAristas" class="resultado-aristas"></div>
-                </div>
-                <div class="col-1">
-                    <div class="side-buttons" style="color: white;">
-                        <label for="imageSelector">Seleccione la imagen del nodo:</label>
-                        <select id="imageSelector">
-                            <option value="images/persona_png.png">Persona</option>
-                            <option value="images/computer_png.png">Computadora</option>
-                        </select>
-                        <button onclick="agregarNodo()" class="custom-btn" style="background-color: rgb(129, 34, 34); color: white;">Agregar Nodo</button>
-                        <button onclick="eliminarNodo()" class="custom-btn" style="background-color: rgb(199, 85, 23); color: white;">Eliminar Nodo</button>
-                        <button onclick="cambiarNombre()" class="custom-btn" style="background-color: #c7a117; color: white;">Cambiar Nombre</button>
-                        <input type="file" id="inputArchivo" accept=".json" class="custom-btn" style="background-color: #5da13b; margin-top: 5%; margin-bottom: 5%; padding: 5%; font-size: 50%">
-                        <button onclick="guardarGrafo()" class="custom-btn" style="background-color: hsl(205, 46%, 43%); color: white;">Guardar Grafo</button>
-                        <button onclick="cargarGrafo()" class="custom-btn" style="background-color: rgb(30, 39, 140); color: white; padding-left: 1%; padding-right: 1%;">Cargar Grafo</button>
-                        <!--button onclick="generarMatriz()" class="custom-btn" style="background-color: rgb(97, 33, 161); color: white; padding-left: 1%; padding-right: 1%;">Matriz de Adyencia</button-->
-                        <button onclick="kruskal()" class="custom-btn" style="background-color: rgb(56, 103, 214); color: white;">Kruskal menor</button>
-                        <button onclick="kruskalWithHighestWeight()" class="custom-btn" style="background-color: rgb(97, 33, 161); color: white;">Kruskal mayor</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div id="result"></div>
                   
     <script src="assets/js/titi.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis-network.min.js"></script>
 
-    <footer id="footer">
-        <h3>
-            Grafos: Análisis de Algoritmos MAT-361
-            <br>
-            © 2024
-        </h3>
-    </footer>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
