@@ -19,12 +19,25 @@ function inicializarGrafo() {
       },
       edges: {
         smooth: false,
+        width: 4,
+        font: {
+          //size: 20, // Tamaño de la letra en píxeles
+          face: 'Impact', // Tipo de letra
+          background: '#ffffff',  
+        }
       },
       nodes: {
         shape: 'image', // Configuración global para los nodos
-        image: 'images/persona_png.png' // URL de la imagen predeterminada
+        image: 'images/persona_png.png', // URL de la imagen predeterminada
+        font: {
+          //size: 20, // Tamaño de la letra en píxeles
+          face: 'Arial Black', // Tipo de letra
+          background: '#ffffff',  
+        }
       }
     };
+
+    
     grafo = new vis.Network(lienzo, data, opciones);
   
     // Eventos del grafo
