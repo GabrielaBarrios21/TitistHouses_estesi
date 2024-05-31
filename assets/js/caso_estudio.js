@@ -19,6 +19,7 @@ function inicializarGrafo() {
       },
       edges: {
         smooth: false,
+        width: 2
       },
       nodes: {
         shape: 'image', // Configuración global para los nodos
